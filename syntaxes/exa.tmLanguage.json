@@ -57,7 +57,7 @@
     "keywords": {
       "patterns": [
         {
-          "match": "\\b(TEST|TEST MRD|TEST EOF)\\b",
+          "match": "\\b(TEST MRD|TEST EOF|TEST)\\b",
           "name": "keyword.control.exa"
         }
       ]
