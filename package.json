@@ -1,33 +1,49 @@
 {
-    "name": "exa-syntax-highlighting",
-    "author": "Jonah Snider <me@jonahsnider.ninja> (jonahsnider.ninja)",
-    "displayName": "EXA Syntax Highlighting",
-    "description": "Syntax highlighting for programming language EXA from the game EXAPUNKS by Zachtronics in Visual Studio Code",
-    "version": "1.0.0",
-    "publisher": "pizzafox",
-    "license": "Apache-2.0",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/pizzafox/exa-syntax-highlighting.git"
-    },
-    "icon": "assets/exapunks.png",
-    "engines": {
-        "vscode": "^1.25.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "author": "Jonah Snider <me@jonahsnider.ninja> (jonahsnider.ninja)",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "language": "exa",
+        "path": "./syntaxes/exa.tmLanguage.json",
+        "scopeName": "source.exa"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "exa",
-            "aliases": ["EXA"],
-            "extensions": [".exa",".exapunks"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "exa",
-            "scopeName": "source.exa",
-            "path": "./syntaxes/exa.tmLanguage.json"
-        }]
-    }
+    "languages": [
+      {
+        "aliases": [
+          "EXA"
+        ],
+        "configuration": "./language-configuration.json",
+        "extensions": [
+          ".exa",
+          ".exapunks"
+        ],
+        "id": "exa"
+      }
+    ]
+  },
+  "description": "Syntax highlighting for programming language EXA from the game EXAPUNKS by Zachtronics in Visual Studio Code",
+  "displayName": "EXA Syntax Highlighting",
+  "engines": {
+    "vscode": "^1.25.0"
+  },
+  "icon": "assets/exapunks.png",
+  "keywords": [
+    "EXAPUNKS",
+    "Video Game",
+    "syntax",
+    "highlight",
+    "Zachtronics"
+  ],
+  "license": "Apache-2.0",
+  "name": "exa-syntax-highlighting",
+  "publisher": "pizzafox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pizzafox/exa-syntax-highlighting.git"
+  },
+  "version": "1.0.0"
 }
