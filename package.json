@@ -17,7 +17,7 @@
     "contributes": {
         "languages": [{
             "id": "exa",
-            "aliases": ["EXA", "exa"],
+            "aliases": ["EXA"],
             "extensions": [".exa",".exapunks"],
             "configuration": "./language-configuration.json"
         }],
