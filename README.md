@@ -2,6 +2,8 @@
 
 Syntax highlighting for programming language EXA from the game [EXAPUNKS](http://www.zachtronics.com/exapunks/) by [Zachtronics](http://www.zachtronics.com/) in [Visual Studio Code](https://code.visualstudio.com/).
 
+![EXA Syntax Highlighting in action](assets/code.png)
+
 ## Usage
 
 After installation, the syntax highlighting will automatically activate for files ending in the following extensions:
