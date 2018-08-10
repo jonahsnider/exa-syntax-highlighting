@@ -4,6 +4,10 @@
     "description": "Syntax highlighting for programming language EXA from the game EXAPUNKS by Zachtronics in Visual Studio Code",
     "version": "1.0.0",
     "publisher": "Jonah Snider <me@jonahsnider.ninja> (jonahsnider.ninja)",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/pizzafox/exa-syntax-highlighting.git"
+    },
     "engines": {
         "vscode": "^1.25.0"
     },
