@@ -1,7 +1,7 @@
 {
     "name": "exa-syntax-highlighting",
     "displayName": "EXA Syntax Highlighting",
-    "description": "Syntax highlighting for the EXA language used in the game EXAPUNKS by Zachtronics",
+    "description": "Syntax highlighting for programming language EXA from the game EXAPUNKS by Zachtronics in Visual Studio Code",
     "version": "1.0.0",
     "publisher": "Jonah Snider <me@jonahsnider.ninja> (jonahsnider.ninja)",
     "engines": {
