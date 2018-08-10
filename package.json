@@ -8,6 +8,7 @@
       "type": "git",
       "url": "https://github.com/pizzafox/exa-syntax-highlighting.git"
     },
+    "icon": "assets/exapunks.png",
     "engines": {
         "vscode": "^1.25.0"
     },
