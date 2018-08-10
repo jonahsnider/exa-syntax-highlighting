@@ -1,28 +1,74 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "EXA",
-  "patterns": [{
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#invalid"
+    },
+    {
       "include": "#keywords"
     },
     {
-      "include": "#strings"
+      "include": "#storage"
     }
   ],
   "repository": {
-    "keywords": {
-      "patterns": [{
-        "name": "keyword.control.exa",
-        "match": "\\b(if|while|for|return)\\b"
-      }]
+    "comments": {
+      "patterns": [
+        {
+          "match": "NOTE.*",
+          "name": "comment.line.character.exa"
+        }
+      ]
     },
-    "strings": {
-      "name": "string.quoted.double.exa",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": [{
-        "name": "constant.character.escape.exa",
-        "match": "\\\\."
-      }]
+    "constants": {
+      "patterns": [
+        {
+          "match": "\\b(\\d+)\\b",
+          "name": "constant.numeric.exa"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "match": "\\b(COPY|ADDI|SUBI|MULI|DIVI|MODI|SWIZ|MARK|JUMP|TJMP|FJMP|REPL|HALT|KILL|LINK|HOST|MODE|VOID|MAKE|GRAB|FILE|SEEK|VOID|DROP|WIPE|NOOP|RAND)\\b",
+          "name": "support.function.exa"
+        }
+      ]
+    },
+    "invalid": {
+      "patterns": [
+        {
+          "match": "[a-zA-Z]*[a-z]+[a-zA-Z]*",
+          "name": "invalid.illegal.exa"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(TEST|TEST MRD|TEST EOF)\\b",
+          "name": "keyword.control.exa"
+        }
+      ]
+    },
+    "storage": {
+      "patterns": [
+        {
+          "match": "\\b(X|T|F|M)\\b",
+          "name": "storage.type.exa"
+        }
+      ]
     }
   },
   "scopeName": "source.exa"
