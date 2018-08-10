@@ -1,0 +1,26 @@
+{
+    "name": "exa-syntax-highlighting",
+    "displayName": "EXA Syntax Highlighting",
+    "description": "Syntax highlighting for the EXA language used in the game EXAPUNKS by Zachtronics",
+    "version": "0.0.1",
+    "publisher": "Jonah Snider <me@jonahsnider.ninja> (jonahsnider.ninja)",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "exa",
+            "aliases": ["EXA", "exa"],
+            "extensions": [".exa",".exapunks"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "exa",
+            "scopeName": "source.exa",
+            "path": "./syntaxes/exa.tmLanguage.json"
+        }]
+    }
+}
