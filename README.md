@@ -21,3 +21,9 @@ Keep in mind this is written as if this were documentation for the EXA language 
 
 > The EXA virtual machine (EXA-VM) allows many execution agents (EXAs) to execute in a shared network of host computers. Within a network, EXAs can be dynamically created, destroyed, and transferred from one host to another. The EXA-VM enables all EXAs to run independently and simultaneously, even when multiple EXAs are located within the same host.
 An EXA's program consists of a series of instructions. Each instruction requires zero or more operands...
+
+## License
+
+Copyright 2018 Jonah Snider
+
+Apache License 2.0
