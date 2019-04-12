@@ -25,7 +25,7 @@
     "comments": {
       "patterns": [
         {
-          "match": "^[NOTE,;].*",
+          "match": "NOTE.*|;.*",
           "name": "comment.line.character.exa"
         }
       ]
