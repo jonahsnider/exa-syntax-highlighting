@@ -43,7 +43,7 @@
   "publisher": "pizzafox",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pizzafox/exa-syntax-highlighting.git"
+    "url": "https://github.com/jonahsnider/exa-syntax-highlighting.git"
   },
   "version": "1.3.0"
 }
