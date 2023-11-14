@@ -28,7 +28,7 @@
   "description": "Syntax highlighting for programming language EXA from the game EXAPUNKS by Zachtronics in Visual Studio Code",
   "displayName": "EXA Syntax Highlighting",
   "engines": {
-    "vscode": "^1.25.0"
+    "vscode": "^2023.0.0"
   },
   "icon": "assets/exapunks.png",
   "keywords": [
