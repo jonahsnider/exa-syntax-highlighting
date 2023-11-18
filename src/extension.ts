@@ -49,15 +49,6 @@ export function activate(context: vscode.ExtensionContext) {
 				'VOID F',
 			];
 
-			// refer to later comment
-			// type ArgMap = Record<string, string>;
-			// const argMap: ArgMap = {
-			// 	// Found these slower than just pressing space
-			// 	// '=': '|=,<,>|',
-			// 	// 'R': '|X,T,F,M|',
-			// 	'MRD/EOF': '|MRD,EOF|',
-			// };
-
 			for (const line of lines) {
 				const split = line.split(' ');
 				const k = split[0];
@@ -71,16 +62,6 @@ export function activate(context: vscode.ExtensionContext) {
 						elements.push('');
 					}
 				}
-
-				// This is a nice idea but all the tab pressing is worse than just pressing space
-				// It would work if the default completion could be changed to space just for this extension
-				// for (const [i, label] of split.slice(1).entries()) {
-				// 	let annotation = `:${label}`;
-				// 	if (label in argMap) {
-				// 		annotation = argMap[label];
-				// 	}
-				// 	elements.push(`\${${i + 1}${annotation}}`);
-				// }
 
 				c.insertText = new vscode.SnippetString(elements.join(' '));
 				completions.push(c);
