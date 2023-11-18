@@ -43,6 +43,8 @@ export function activate(context: vscode.ExtensionContext) {
 				'SEEK R/N',
 				'SUBI R/N R/N R',
 				'SWIZ R/N R/N R',
+				'TEST EOF',
+				'TEST MRD',
 				'TEST R/N = R/N',
 				'TJMP L',
 				'VOID F',
