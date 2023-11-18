@@ -52,15 +52,15 @@ export function activate(context: vscode.ExtensionContext) {
 				const split = line.split(' ');
 				const k = split[0];
 				const c = new vscode.CompletionItem(k);
-				const snippets = [];
+				const elements = [k];
 				for (const [i, label] of split.slice(1).entries()) {
 					if (label == "R") {
-						snippets.push(`\${${i + 1}|X,T,F,M|}`);
+						elements.push(`\${${i + 1}|X,T,F,M|}`);
 					} else {
-						snippets.push(`\${${i + 1}:${label}}`);
+						elements.push(`\${${i + 1}:${label}}`);
 					}
 				}
-				c.insertText = new vscode.SnippetString(`${k} ${snippets.join(' ')}`);
+				c.insertText = new vscode.SnippetString(elements.join(' '));
 				completions.push(c);
 			}
 			return completions;
