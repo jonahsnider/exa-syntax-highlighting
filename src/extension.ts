@@ -53,7 +53,7 @@ export function activate(context: vscode.ExtensionContext) {
 			for (const line of lines) {
 				const split = line.split(' ');
 				const k = split[0];
-				const c = new vscode.CompletionItem(k);
+				const c = new vscode.CompletionItem(line);
 				const elements = [k];
 				for (const [i, label] of split.slice(1).entries()) {
 					if (label == "R") {
