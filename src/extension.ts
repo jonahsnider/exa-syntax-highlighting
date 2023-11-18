@@ -26,8 +26,8 @@ export function activate(context: vscode.ExtensionContext) {
 				'NOOP',
 				'WIPE',
 
-				'COPY R/N R',
 				'ADDI R/N R/N R',
+				'COPY R/N R',
 				'DIVI R/N R/N R',
 				'FILE R',
 				'FJMP L',
@@ -43,8 +43,8 @@ export function activate(context: vscode.ExtensionContext) {
 				'SEEK R/N',
 				'SUBI R/N R/N R',
 				'SWIZ R/N R/N R',
-				'TEST R/N = R/N',
 				'TEST MRD/EOF',
+				'TEST R/N = R/N',
 				'TJMP L',
 				'VOID F',
 			];
