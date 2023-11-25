@@ -64,13 +64,17 @@ export function activate(context: vscode.ExtensionContext) {
 						elements.push('');
 					}
 				}
+				if (k.startsWith('@')) {
+					c.range = new vscode.Range(position.translate(0, -1), position);
+				}
 
 				c.insertText = new vscode.SnippetString(elements.join(' '));
 				completions.push(c);
 			}
 			return completions;
-		}
-	});
+		},
+
+	}, '@');
 
 	context.subscriptions.push(provider);
 }
