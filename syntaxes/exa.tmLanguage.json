@@ -59,6 +59,10 @@
         {
           "match": "(?i)\\b(TEST MRD|TEST EOF|TEST)\\b",
           "name": "keyword.control.exa"
+        },
+        {
+          "match": "(?i)(@REP|@END|@{|,|})",
+          "name": "keyword.control.exa"
         }
       ]
     },

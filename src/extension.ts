@@ -18,6 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 
 			const lines = [
+				'@END',
 				'DROP',
 				'HALT',
 				'KILL',
@@ -26,6 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
 				'NOOP',
 				'WIPE',
 
+				'@REP N',
 				'ADDI R/N R/N R',
 				'COPY R/N R',
 				'DIVI R/N R/N R',
