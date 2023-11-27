@@ -11,10 +11,18 @@ export function activate(context: vscode.ExtensionContext) {
 		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
 			const completions = [];
 
-			// Don't double autocomplete
+			// Handle @{} and don't double autocomplete other commands.
 			const linePrefix = document.lineAt(position).text.slice(0, position.character);
 			if (linePrefix.includes(' ')) {
-				return undefined;
+				const moveCursorCommand: vscode.Command = {
+					title: "Move cursor left between brackets",
+					command: "cursorLeft"
+				};
+				const c = new vscode.CompletionItem('@{}');
+				c.command = moveCursorCommand;
+				c.range = new vscode.Range(position.translate(0, -1), position);
+				completions.push(c);
+				return completions;
 			}
 
 			const lines = [
