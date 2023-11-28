@@ -14,15 +14,20 @@ export function activate(context: vscode.ExtensionContext) {
 			// Handle @{} and don't double autocomplete other commands.
 			const linePrefix = document.lineAt(position).text.slice(0, position.character);
 			if (linePrefix.includes(' ')) {
-				const moveCursorCommand: vscode.Command = {
-					title: "Move cursor left between brackets",
-					command: "cursorLeft"
-				};
-				const c = new vscode.CompletionItem('@{}');
-				c.command = moveCursorCommand;
-				c.range = new vscode.Range(position.translate(0, -1), position);
-				completions.push(c);
-				return completions;
+				if (linePrefix.includes('@')) {
+					const moveCursorCommand: vscode.Command = {
+						title: "Move cursor left between brackets",
+						command: "cursorLeft"
+					};
+					const c = new vscode.CompletionItem('@{}');
+					c.command = moveCursorCommand;
+					c.range = new vscode.Range(position.translate(0, -1), position);
+					completions.push(c);
+					return completions;
+				} else {
+					// return undefined to allow general text matching
+					return undefined;
+				}
 			}
 
 			const lines = [
